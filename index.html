@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Property World - Home</title>
+
+    <!-- Poppins Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Home CSS -->
+    <link rel="stylesheet" href="style.css/home.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <!-- Property Logo -->
+
+        <img
+            src="Assest/images/logo.png"
+            alt="Property World"
+            class="logo">
+
+
+        <!-- Navigation -->
+
+        <nav>
+
+            <!-- Home -->
+
+            <a
+                href="index.html"
+                class="active">
+
+                <img
+                    src="Assest/icons/home.png"
+                    alt="Home">
+
+            </a>
+
+
+            <!-- Buy -->
+
+            <a href="Buy.html">
+                Buy
+            </a>
+
+
+            <!-- Rent -->
+
+            <a href="Rent.html">
+                Rent
+            </a>
+
+
+            <!-- Agent -->
+
+            <a href="Agent.html">
+                Agent
+            </a>
+
+
+            <!-- About -->
+
+            <a href="about.html">
+                About
+            </a>
+
+
+            <!-- Login -->
+
+            <a href="Login.html">
+
+                <img
+                    src="Assest/gif/login.gif"
+                    alt="Login">
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+
+                <p class="hero-small">
+
+                    <mark>
+                        YOUR DREAM HOME AWAITS
+                    </mark>
+
+                </p>
+
+
+                <h1>
+
+                    Find the Perfect Property
+                    <br>
+
+                    for Your Future
+
+                </h1>
+
+
+                <p class="hero-text">
+
+                    Buy, Rent or Invest in the best properties across the city.
+                    <br>
+
+                    We make your real estate journey simple and stress-free.
+
+                </p>
+
+
+
+                <!-- ================= SEARCH BOX ================= -->
+
+                <div class="search-box">
+
+
+                    <!-- Location -->
+
+                    <div class="search-item">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <div>
+
+                            <small>
+                                Location
+                            </small>
+
+                            <span>
+                                Enter city, area or landmark
+                            </span>
+
+                        </div>
+
+
+                        <select id="homeLocation">
+                            <option>Mumbai</option>
+                            <option>Pune</option>
+                            <option>Delhi</option>
+                            <option>Thane</option>
+                        </select>   
+
+                    </div>
+
+
+
+                    <!-- Property Type -->
+
+                    <div class="search-item">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        <div>
+
+                            <small>
+                                Property Type
+                            </small>
+
+                            <span>
+                                Any Type
+                            </span>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+
+
+                        <select id="homePropertyType">
+
+                            <option>
+                                Land
+                            </option>
+
+                            <option>
+                                Apartment
+                            </option>
+
+                            <option>
+                                Villa
+                            </option>
+
+                            <option>
+                                Residential Land
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- Budget -->
+
+                    <div class="search-item">
+
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                        <div>
+
+                            <small>
+                                Budget
+                            </small>
+
+                            <span>
+                                Any Budget
+                            </span>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+
+
+                        <select <select id="homeBudget">
+    
+
+                            <option>
+                                50L to 1 Cr
+                            </option>
+
+                            <option>
+                                1 Cr to 4 Cr
+                            </option>
+
+                            <option>
+                                4 Cr to 7 Cr
+                            </option>
+
+                            <option>
+                                7 Cr to 10 Cr
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- Search Button -->
+
+                   <button class="search-btn" onclick="searchHome()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <br>
+    <br>
+
+
+
+    <!-- ================= PROPERTY FEATURES ================= -->
+
+    <section class="property-features">
+
+
+        <!-- Trusted & Secure -->
+
+        <div class="feature-box">
+
+            <img
+                src="Assest/gif/security.gif"
+                alt="Trusted and Secure">
+
+
+            <div class="feature-text">
+
+                <h3>
+                    Trusted &amp; Secure
+                </h3>
+
+                <p>
+                    Safe Transaction, Verified listing.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Verified Property -->
+
+        <div class="feature-box">
+
+            <img
+                src="Assest/gif/Deal.gif"
+                alt="Verified Property">
+
+
+            <div class="feature-text">
+
+                <h3>
+                    Verified Property
+                </h3>
+
+                <p>
+                    Only Genuine and authenticate listing.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Expert Support -->
+
+        <div class="feature-box">
+
+            <img
+                src="Assest/gif/support.gif"
+                alt="Expert Support">
+
+
+            <div class="feature-text">
+
+                <h3>
+                    Expert Support
+                </h3>
+
+                <p>
+                    Get help at every step.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Best Deals -->
+
+        <div class="feature-box">
+
+            <img
+                src="Assest/gif/star.gif"
+                alt="Best Deals">
+
+
+            <div class="feature-text">
+
+                <h3>
+                    Best Deals
+                </h3>
+
+                <p>
+                    Great Properties at the right price.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- ================= EXPLORE PROPERTY CATEGORIES ================= -->
+
+    <section class="property-categories">
+
+
+        <div class="category-header">
+
+            <h1>
+                Explore Property Categories
+            </h1>
+
+
+            <a
+                href="#"
+                class="view-all">
+
+                View All
+                <span>
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- Apartment -->
+
+        <div class="category-box">
+
+            <img
+                src="Assest/images/Apartment.jpg"
+                alt="Apartments">
+
+
+            <div class="category-overlay">
+
+                <div class="category-title">
+
+                    <span class="category-icon">
+                        ▦
+                    </span>
+
+                    <h2>
+                        Apartments
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="#"
+                    class="view-properties">
+
+                    View Properties
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Villas -->
+
+        <div class="category-box">
+
+            <img
+                src="Assest/images/villas.jpg"
+                alt="Villas">
+
+
+            <div class="category-overlay">
+
+                <div class="category-title">
+
+                    <span class="category-icon">
+                        ⌂
+                    </span>
+
+                    <h2>
+                        Villas
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="#"
+                    class="view-properties">
+
+                    View Properties
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Plots -->
+
+        <div class="category-box">
+
+            <img
+                src="Assest/images/Plots.jpg"
+                alt="Plots">
+
+
+            <div class="category-overlay">
+
+                <div class="category-title">
+
+                    <span class="category-icon">
+                        ⌾
+                    </span>
+
+                    <h2>
+                        Plots
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="#"
+                    class="view-properties">
+
+                    View Properties
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Commercial -->
+
+        <div class="category-box">
+
+            <img
+                src="Assest/images/commerical.jpg"
+                alt="Commercial">
+
+
+            <div class="category-overlay">
+
+                <div class="category-title">
+
+                    <span class="category-icon">
+                        ▥
+                    </span>
+
+                    <h2>
+                        Commercial
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="#"
+                    class="view-properties">
+
+                    View Properties
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Row Houses -->
+
+        <div class="category-box">
+
+            <img
+                src="Assest/images/Residential.jpg"
+                alt="Row Houses">
+
+
+            <div class="category-overlay">
+
+                <div class="category-title">
+
+                    <span class="category-icon">
+                        ⌂
+                    </span>
+
+                    <h2>
+                        Row Houses
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="#"
+                    class="view-properties">
+
+                    View Properties
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- ================= FEATURED PROPERTIES ================= -->
+
+    <section id="popular-properties">
+
+
+        <h2>
+            Featured Properties
+        </h2>
+
+
+        <p>
+            Handpicked Properties For You
+        </p>
+
+
+
+        <div class="property-container">
+
+
+            <!-- ================= CARD 1 ================= -->
+
+            <article 
+             class="property-card"
+            data-location="Pune"
+            data-type="Villa"
+            data-budget="1 Cr to 4 Cr">
+
+
+                <img
+                    src="Assest/images/card 1.jpg"
+                    alt="Luxury 3 BHK Villa">
+
+
+                <h3>
+                    Luxury 3 BHK Villa
+                </h3>
+
+
+                <div class="location">
+
+                    <img
+                        src="Assest/icons/location.png"
+                        alt="Location">
+
+                    <p>
+                        Kalyani Nagar, Pune
+                    </p>
+
+                </div>
+
+
+                <h3>
+                    ₹ 2.45 Cr
+                </h3>
+
+
+                <!-- VIEW DETAILS -->
+
+                <a href="property-details.html?property=Modern%202%20BHK%20Apartment">
+                    View Details <span>→</span>
+                </a>
+
+            </article>
+
+
+
+
+            <!-- ================= CARD 2 ================= -->
+
+            <article
+            
+            class="property-card"
+            data-location="Mumbai"
+            data-type="Villa"
+            data-budget="4 Cr to 7 Cr">
+
+
+                <img
+                    src="Assest/images/card 2.jpg"
+                    alt="Luxury 3 BHK Villa">
+
+
+                <h3>
+                    Luxury 3 BHK Villa
+                </h3>
+
+
+                <div class="location">
+
+                    <img
+                        src="Assest/icons/location.png"
+                        alt="Location">
+
+                    <p>
+                        Gandhi Nagar, Mumbai
+                    </p>
+
+                </div>
+
+
+                <h3>
+                    ₹ 4.90 Cr
+                </h3>
+
+
+                <!-- VIEW DETAILS -->
+
+                <a href="property-details.html?property=Luxury%203%20BHK%20Residence">
+                View Details <span>→</span>
+                </a>
+
+            </article>
+
+
+
+
+            <!-- ================= CARD 3 ================= -->
+
+            <article
+            <article
+            class="property-card"
+            data-location="Thane"
+            data-type="Apartment"
+            data-budget="50L to 1 Cr">
+
+
+                <img
+                    src="Assest/images/card 3.jpg"
+                    alt="Luxury 2 BHK Apartment">
+
+
+                <h3>
+                    Luxury 2 BHK Apartment
+                </h3>
+
+
+                <div class="location">
+
+                    <img
+                        src="Assest/icons/location.png"
+                        alt="Location">
+
+                    <p>
+                        Lokmanya Nagar, Thane
+                    </p>
+
+                </div>
+
+
+                <h3>
+                    ₹ 35,000/Month
+                </h3>
+
+
+                <!-- VIEW DETAILS -->
+
+                <a href="property-details.html?property=Beautiful%20Family%20Home">
+                    View Details <span>→</span>
+                </a>
+
+
+            </article>
+
+
+
+
+            <!-- ================= CARD 4 ================= -->
+
+            <article
+            <article
+            class="property-card"
+            data-location="Thane"
+            data-type="Land"
+            data-budget="1 Cr to 4 Cr">
+
+
+                <img
+                    src="Assest/images/card 4.jpg"
+                    alt="Residential Plot">
+
+
+                <h3>
+                    Residential Plot
+                </h3>
+
+
+                <div class="location">
+
+                    <img
+                        src="Assest/icons/location.png"
+                        alt="Location">
+
+                    <p>
+                        Kalyan, Thane
+                    </p>
+
+                </div>
+
+
+                <h3>
+                    ₹ 1.45 Cr
+                </h3>
+
+
+                <!-- VIEW DETAILS -->
+
+                <a
+                    href="property-details.html?property=Residential%20Plot"
+                    class="view-properties">
+
+                    View Details
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+
+        <div class="footer-container">
+
+
+            <!-- Logo / Brand -->
+
+            <section class="footer-brand">
+
+
+                <img
+                    src="Assest/images/logo.png"
+                    alt="Property World"
+                    class="footer-logo">
+
+
+                <p>
+                    
+                </p>
+
+
+                <div class="footer-socials">
+
+
+                    <a href="#">
+
+                        <img
+                            src="Assest/icons/facebook.png"
+                            alt="Facebook">
+
+                    </a>
+
+
+                    <a href="#">
+
+                        <img
+                            src="Assest/icons/instagram.png"
+                            alt="Instagram">
+
+                    </a>
+
+
+                    <a href="#">
+
+                        <img
+                            src="Assest/icons/twitter.png"
+                            alt="Twitter">
+
+                    </a>
+
+
+                    <a href="#">
+
+                        <img
+                            src="Assest/icons/youtube.png"
+                            alt="YouTube">
+
+                    </a>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- Quick Links -->
+
+            <section>
+
+
+                <h3>
+                    Quick Links
+                </h3>
+
+
+                <ul>
+
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="Buy.html">
+                            Buy
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="sell.html">
+                            Sell
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="Agent.html">
+                            Agent
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+            </section>
+
+
+
+            <!-- Customer Service -->
+
+            <section>
+
+
+                <h3>
+                    Customer Service
+                </h3>
+
+
+                <ul>
+
+                    <li>
+                        Track Order
+                    </li>
+
+                    <li>
+                        FAQs
+                    </li>
+
+                    <li>
+                        Shipping Policy
+                    </li>
+
+                    <li>
+                        Return Policy
+                    </li>
+
+                    <li>
+                        Terms &amp; Conditions
+                    </li>
+
+                </ul>
+
+
+            </section>
+
+
+
+            <!-- Contact Information -->
+
+            <section>
+
+
+                <h3>
+                    Contact Us
+                </h3>
+
+
+                <p>
+                    📞 +91 98765 43210
+                </p>
+
+
+                <p>
+                    ✉ support@PropertyWorld.com
+                </p>
+
+
+                <p>
+
+                    📍 123 Street, Mumbai,
+                    <br>
+
+                    Maharashtra 400001
+
+                </p>
+
+
+            </section>
+
+
+
+            <!-- Payment Methods -->
+
+            <section>
+
+
+                <h3>
+                    Payment Methods
+                </h3>
+
+
+                <div class="payment-icons">
+
+
+                    <img
+                        src="Assest/icons/visa.png"
+                        alt="Visa">
+
+
+                    <img
+                        src="Assest/icons/mastercard.png"
+                        alt="MasterCard">
+
+
+                    <img
+                        src="Assest/icons/upi.png"
+                        alt="UPI">
+
+
+                    <img
+                        src="Assest/icons/paytm.png"
+                        alt="Paytm">
+
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+
+
+        <!-- Copyright -->
+
+        <div class="footer-bottom">
+
+            © 2026 Property World. All Rights Reserved.
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="JavaScript/script.js"></script>
+
+
+</body>
+
+</html>

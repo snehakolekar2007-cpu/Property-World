@@ -1,0 +1,719 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f8f6;
+    color: #222;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    width: 100%;
+    height: 100px;
+    padding: 0 60px;
+
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid #ddd;
+}
+
+header nav {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+}
+
+header nav > img {
+    width: 100px;
+    height: 100px;
+
+    object-fit: contain;
+
+    margin-right: auto;
+}
+
+header nav a {
+    height: 90px;
+
+    padding: 0 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    color: black;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    border-bottom: 3px solid transparent;
+}
+
+header nav a:hover {
+    color: #20573f;
+}
+
+header nav a.active {
+    color: #20573f;
+
+    border-bottom: 3px solid #20573f;
+}
+
+
+/* HOME ICON */
+
+header nav a:first-of-type img {
+    width: 28px;
+    height: 28px;
+
+    object-fit: contain;
+}
+
+
+/* LOGIN ICON */
+
+header nav a:last-child img {
+    width: 35px;
+    height: 35px;
+
+    object-fit: contain;
+}
+
+
+/* ================= BUY HERO ================= */
+
+.buy-hero {
+    height: 420px;
+
+    background-image: url("../Assest/images/banner 1.png");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+}
+
+.buy-content {
+    width: 1100px;
+
+    margin: auto;
+
+    padding: 30px;
+}
+
+.buy-small-title {
+    color: #20573f;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+}
+
+.buy-content h1 {
+    font-size: 52px;
+
+    line-height: 1.1;
+
+    color: #153829;
+
+    margin-bottom: 20px;
+}
+
+.buy-content h1 span {
+    color: #20573f;
+}
+
+.buy-description {
+    width: 550px;
+
+    font-size: 16px;
+
+    color: #555;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================= SEARCH ================= */
+
+.buy-search {
+    width: 650px;
+    height: 60px;
+
+    background-color: white;
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 10px 0 20px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.buy-search > i {
+    color: #20573f;
+
+    font-size: 18px;
+
+    margin-right: 12px;
+}
+
+.buy-search input {
+    flex: 1;
+
+    height: 45px;
+
+    border: none;
+
+    outline: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+}
+
+.buy-search button {
+    height: 45px;
+
+    padding: 0 22px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #20573f;
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.buy-search button:hover {
+    background-color: #153829;
+}
+
+
+/* ================================================= */
+/* ================= FEATURED ====================== */
+/* ================================================= */
+
+.featured-properties {
+    padding: 60px;
+
+    background-color: #f7f8f6;
+}
+
+
+/* HEADING */
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading p {
+    color: #20573f;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 5px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+
+    color: #222;
+}
+
+
+/* ================================================= */
+/* ================= PROPERTY GRID ================= */
+/* ================================================= */
+
+.property-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* ================================================= */
+/* ================= PROPERTY CARD ================= */
+/* ================================================= */
+
+.home-card {
+    width: 100%;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+/* ================================================= */
+/* ================= PROPERTY IMAGE ================ */
+/* ================================================= */
+
+.property-image {
+    width: 100%;
+
+    height: 220px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: #eee;
+}
+
+.property-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* LIKE BUTTON */
+
+.like-button {
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* ================================================= */
+/* ================= PROPERTY CONTENT ============== */
+/* ================================================= */
+
+.property-content {
+    padding: 20px;
+}
+
+.property-type {
+    color: #20573f;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+.property-content h3 {
+    font-size: 20px;
+
+    color: #222;
+
+    margin-bottom: 10px;
+}
+
+.location {
+    color: #666;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.location i {
+    color: #20573f;
+
+    margin-right: 5px;
+}
+
+
+/* ================================================= */
+/* ================= PROPERTY INFO ================= */
+/* ================================================= */
+
+.property-info {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    color: #555;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+.property-info span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+.property-info i {
+    color: #20573f;
+}
+
+
+/* ================================================= */
+/* ================= PRICE ========================= */
+/* ================================================= */
+
+.property-content h4 {
+    color: #20573f;
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ================================================= */
+/* ================= BUTTONS ======================= */
+/* ================================================= */
+
+.property-buttons {
+    display: flex;
+
+    gap: 10px;
+}
+
+.property-buttons button {
+    flex: 1;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #20573f;
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.property-buttons button:hover {
+    background-color: #153829;
+}
+
+
+/* ================================================= */
+/* ================= VIEW ALL ====================== */
+/* ================================================= */
+
+.view-all {
+    text-align: center;
+
+    margin-top: 35px;
+}
+
+.view-all a {
+    color: #20573f;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+.view-all a:hover {
+    color: #153829;
+}
+
+
+/* ================================================= */
+/* ================= FOOTER ======================== */
+/* ================================================= */
+
+footer {
+    width: 100%;
+
+    background-color: #153829;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+
+/* ================================================= */
+/* ================= RESPONSIVE ==================== */
+/* ================================================= */
+
+@media (max-width: 1000px) {
+
+    header {
+        padding: 0 30px;
+    }
+
+    .featured-properties {
+        padding: 40px 30px;
+    }
+
+    .property-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 0 15px;
+    }
+
+    header nav {
+        gap: 12px;
+    }
+
+    header nav > img {
+        width: 80px;
+        height: 80px;
+    }
+
+    header nav a {
+        font-size: 12px;
+    }
+
+    .buy-content {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .buy-content h1 {
+        font-size: 38px;
+    }
+
+    .buy-description {
+        width: 100%;
+    }
+
+    .buy-search {
+        width: 100%;
+    }
+
+    .featured-properties {
+        padding: 40px 20px;
+    }
+
+    .property-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+footer{
+    background: #153829;
+    color:#ffffff;
+    margin-top:70px;
+}
+
+/* Main Footer Layout */
+
+.footer-container{
+    width:90%;
+    margin:auto;
+    padding:45px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+/* Footer Columns */
+
+.footer-container section{
+    width:20%;
+    padding:0 22px;
+    border-right:1px solid rgba(255,255,255,.15);
+}
+
+.footer-container section:last-child{
+    border-right:none;
+}
+
+.footer-container section:first-child > img{
+    width:170px;
+    height:auto;
+    margin-bottom:18px;
+}
+
+.footer-container section:first-child p{
+    color:#cfcfcf;
+    font-size:15px;
+    line-height:26px;
+    margin-bottom:22px;
+}
+
+.footer-socials{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.footer-socials a{
+    display:flex;
+}
+
+.footer-socials img{
+    width:34px;
+    height:34px;
+    transition:.3s;
+}
+
+.footer-container h3{
+    font-size:18px;
+    font-weight:600;
+    color:white;
+    margin-bottom:20px;
+}
+
+
+.footer-container ul{
+    list-style:none;
+}
+
+.footer-container ul li{
+    margin-bottom:14px;
+}
+
+.footer-container ul li a{
+    color: #d4d4d4;;
+    text-decoration:none;
+    font-size:15px;
+    transition:.3s;
+}
+
+
+.footer-container ul li a:hover{
+    color:#A8C9B5;
+}
+
+/* Customer Service */
+
+.footer-container section:nth-child(3) li{
+    color:#A8C9B5;
+    font-size:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.footer-container section:nth-child(3) li:hover{
+    color:#ff6b00;
+}
+
+
+
+.footer-container section:nth-child(4) p{
+    color:#A8C9B5;
+    font-size:13px;
+    line-height:28px;
+    margin-bottom:10px;
+}
+
+
+
+.payment-icons{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.payment-icons img{
+    width:55px;
+    height:auto;
+    background:#ffffff;
+    padding:4px;
+    border-radius:6px;
+}
+footer > p{
+    border-top:1px solid rgba(255,255,255,.15);
+    text-align:center;
+    color:#bdbdbd;
+    padding:18px 0;
+    font-size:15px;
+}

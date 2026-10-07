@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rent - Property World</title>
+
+    <link rel="stylesheet" href="style.css/rent.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+    <nav>
+
+        <img src="Assest/images/logo.png" alt="Property World">
+
+        <a href="index.html">
+            <img src="Assest/icons/home.png" alt="Home">
+        </a>
+
+        <a href="Buy.html">Buy</a>
+
+        <a href="Rent.html" class="active">Rent</a>
+
+        <a href="Agent.html">Agent</a>
+
+        <a href="about.html">About</a>
+
+        <a href="Login.html">
+            <img src="Assest/gif/login.gif" alt="Login">
+        </a>
+
+    </nav>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="rent-hero">
+
+    <div class="hero-content">
+
+        <p class="small-title">PROPERTY WORLD</p>
+
+        <h1>Find Your Perfect Rental Home</h1>
+
+        <p>
+            Comfortable homes, great locations and affordable
+            rental properties for you and your family.
+        </p>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="locationSearch"
+                placeholder="Search by location..."
+            >
+
+            <button onclick="searchRentals()">
+                Search
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= LIFESTYLE ================= -->
+
+<section class="lifestyle">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="small-title">CHOOSE YOUR STYLE</p>
+            <h2>Homes For Every Lifestyle</h2>
+        </div>
+
+    </div>
+
+
+    <div class="lifestyle-container">
+
+        <div class="lifestyle-card">
+            <img src="Assest/images/city.jpg" alt="City Home">
+            <h3>City Living</h3>
+            <p>Homes close to everything.</p>
+        </div>
+
+        <div class="lifestyle-card">
+            <img src="Assest/images/peaceful.jpg" alt="Peaceful Home">
+            <h3>Peaceful Living</h3>
+            <p>Quiet and relaxing homes.</p>
+        </div>
+
+        <div class="lifestyle-card">
+            <img src="Assest/images/family.jpg" alt="Family Home">
+            <h3>Family Homes</h3>
+            <p>Perfect homes for families.</p>
+        </div>
+
+        <div class="lifestyle-card">
+            <img src="Assest/images/studio.jpg" alt="Studio">
+            <h3>Studio Homes</h3>
+            <p>Compact and affordable.</p>
+        </div>
+
+        <div class="lifestyle-card">
+            <img src="Assest/images/luxury.jpg" alt="Luxury Home">
+            <h3>Luxury Living</h3>
+            <p>Premium rental properties.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURED RENTALS ================= -->
+
+<section class="featured-rentals" id="featured-rentals">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="small-title">FEATURED RENTALS</p>
+            <h2>Available Rental Properties</h2>
+        </div>
+
+    </div>
+
+
+    <div class="featured-container">
+
+
+        <!-- CARD 1 -->
+
+        <div class="property-card">
+
+            <div class="property-image">
+
+                <img src="Assest/images/rent1.jpg" alt="2 BHK Apartment">
+
+                <button class="heart" onclick="toggleHeart(this)">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="property-content">
+
+                <h3>2 BHK Apartment</h3>
+
+                <p class="location">📍 Kalyan</p>
+
+                <h4>₹18,000 <span>/ month</span></h4>
+
+                <div class="property-details">
+                    <span>🛏 2 Beds</span>
+                    <span>🛁 2 Baths</span>
+                    <span>📐 950 sq.ft</span>
+                </div>
+
+                <button
+                    class="rent-button"
+                    onclick="openRentForm('2 BHK Apartment')">
+                    Rent Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 2 -->
+
+        <div class="property-card">
+
+            <div class="property-image">
+
+                <img src="Assest/images/rent2.jpg" alt="3 BHK Apartment">
+
+                <button class="heart" onclick="toggleHeart(this)">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="property-content">
+
+                <h3>3 BHK Apartment</h3>
+
+                <p class="location">📍 Thane West</p>
+
+                <h4>₹28,000 <span>/ month</span></h4>
+
+                <div class="property-details">
+                    <span>🛏 3 Beds</span>
+                    <span>🛁 2 Baths</span>
+                    <span>📐 1350 sq.ft</span>
+                </div>
+
+                <button
+                    class="rent-button"
+                    onclick="openRentForm('3 BHK Apartment')">
+                    Rent Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 3 -->
+
+        <div class="property-card">
+
+            <div class="property-image">
+
+                <img src="Assest/images/rent3.jpg" alt="Independent House">
+
+                <button class="heart" onclick="toggleHeart(this)">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="property-content">
+
+                <h3>Independent House</h3>
+
+                <p class="location">📍 Dombivli</p>
+
+                <h4>₹25,000 <span>/ month</span></h4>
+
+                <div class="property-details">
+                    <span>🛏 3 Beds</span>
+                    <span>🛁 2 Baths</span>
+                    <span>📐 1500 sq.ft</span>
+                </div>
+
+                <button
+                    class="rent-button"
+                    onclick="openRentForm('Independent House')">
+                    Rent Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 4 -->
+
+        <div class="property-card">
+
+            <div class="property-image">
+
+                <img src="Assest/images/rent4.jpg" alt="1 BHK Apartment">
+
+                <button class="heart" onclick="toggleHeart(this)">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="property-content">
+
+                <h3>1 BHK Apartment</h3>
+
+                <p class="location">📍 Kalyan West</p>
+
+                <h4>₹15,000 <span>/ month</span></h4>
+
+                <div class="property-details">
+                    <span>🛏 1 Bed</span>
+                    <span>🛁 1 Bath</span>
+                    <span>📐 650 sq.ft</span>
+                </div>
+
+                <button
+                    class="rent-button"
+                    onclick="openRentForm('1 BHK Apartment')">
+                    Rent Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 5 -->
+
+        <div class="property-card">
+
+            <div class="property-image">
+
+                <img src="Assest/images/rent5.jpg" alt="Luxury 2 BHK">
+
+                <button class="heart" onclick="toggleHeart(this)">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="property-content">
+
+                <h3>Luxury 2 BHK</h3>
+
+                <p class="location">📍 Thane</p>
+
+                <h4>₹32,000 <span>/ month</span></h4>
+
+                <div class="property-details">
+                    <span>🛏 2 Beds</span>
+                    <span>🛁 2 Baths</span>
+                    <span>📐 1100 sq.ft</span>
+                </div>
+
+                <button
+                    class="rent-button"
+                    onclick="openRentForm('Luxury 2 BHK')">
+                    Rent Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 6 -->
+
+        <div class="property-card">
+
+            <div class="property-image">
+
+                <img src="Assest/images/rent6.jpg" alt="Studio Apartment">
+
+                <button class="heart" onclick="toggleHeart(this)">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="property-content">
+
+                <h3>Studio Apartment</h3>
+
+                <p class="location">📍 Dombivli East</p>
+
+                <h4>₹12,000 <span>/ month</span></h4>
+
+                <div class="property-details">
+                    <span>🛏 1 Bed</span>
+                    <span>🛁 1 Bath</span>
+                    <span>📐 500 sq.ft</span>
+                </div>
+
+                <button
+                    class="rent-button"
+                    onclick="openRentForm('Studio Apartment')">
+                    Rent Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- HIDDEN CARDS 7 TO 14 -->
+
+        <div class="property-card extra-rental">
+
+            <div class="property-image">
+
+                <img src="Assest/images/rent7.jpg" alt="2 BHK Family Home">
+
+                <button class="heart" onclick="toggleHeart(this)">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="property-content">
+
+                <h3>2 BHK Family Home</h3>
+
+                <p class="location">📍 Ulhasnagar</p>
+
+                <h4>₹17,000 <span>/ month</span></h4>
+
+                <div class="property-details">
+                    <span>🛏 2 Beds</span>
+                    <span>🛁 2 Baths</span>
+                    <span>📐 900 sq.ft</span>
+                </div>
+
+                <button class="rent-button"
+                    onclick="openRentForm('2 BHK Family Home')">
+                    Rent Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 8 -->
+
+        <div class="property-card extra-rental">
+
+            <div class="property-image">
+
+                <img src="Assest/images/rent8.jpg" alt="Premium 3 BHK">
+
+                <button class="heart" onclick="toggleHeart(this)">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="property-content">
+
+                <h3>Premium 3 BHK</h3>
+
+                <p class="location">📍 Kalyan East</p>
+
+                <h4>₹30,000 <span>/ month</span></h4>
+
+                <div class="property-details">
+                    <span>🛏 3 Beds</span>
+                    <span>🛁 3 Baths</span>
+                    <span>📐 1400 sq.ft</span>
+                </div>
+
+                <button class="rent-button"
+                    onclick="openRentForm('Premium 3 BHK')">
+                    Rent Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 9 -->
+
+        <div class="property-card extra-rental">
+
+            <div class="property-image">
+
+                <img src="Assest/images/rent9.jpg" alt="Modern 1 BHK">
+
+                <button class="heart" onclick="toggleHeart(this)">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="property-content">
+
+                <h3>Modern 1 BHK</h3>
+
+                <p class="location">📍 Dombivli West</p>
+
+                <h4>₹14,000 <span>/ month</span></h4>
+
+                <div class="property-details">
+                    <span>🛏 1 Bed</span>
+                    <span>🛁 1 Bath</span>
+                    <span>📐 600 sq.ft</span>
+                </div>
+
+                <button class="rent-button"
+                    onclick="openRentForm('Modern 1 BHK')">
+                    Rent Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 10 -->
+
+        <div class="property-card extra-rental">
+
+            <div class="property-image">
+
+                <img src="Assest/images/rent10.jpg" alt="Spacious 2 BHK">
+
+                <button class="heart" onclick="toggleHeart(this)">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="property-content">
+
+                <h3>Spacious 2 BHK</h3>
+
+                <p class="location">📍 Thane East</p>
+
+                <h4>₹22,000 <span>/ month</span></h4>
+
+                <div class="property-details">
+                    <span>🛏 2 Beds</span>
+                    <span>🛁 2 Baths</span>
+                    <span>📐 1000 sq.ft</span>
+                </div>
+
+                <button class="rent-button"
+                    onclick="openRentForm('Spacious 2 BHK')">
+                    Rent Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 11 -->
+
+        <div class="property-card extra-rental">
+
+            <div class="property-image">
+
+                <img src="Assest/images/rent11.jpg" alt="Luxury 3 BHK Villa">
+
+                <button class="heart" onclick="toggleHeart(this)">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="property-content">
+
+                <h3>Luxury 3 BHK Villa</h3>
+
+                <p class="location">📍 Kalyan</p>
+
+                <h4>₹40,000 <span>/ month</span></h4>
+
+                <div class="property-details">
+                    <span>🛏 3 Beds</span>
+                    <span>🛁 3 Baths</span>
+                    <span>📐 1800 sq.ft</span>
+                </div>
+
+                <button class="rent-button"
+                    onclick="openRentForm('Luxury 3 BHK Villa')">
+                    Rent Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 12 -->
+
+        <div class="property-card extra-rental">
+
+            <div class="property-image">
+
+                <img src="Assest/images/rent12.jpg" alt="Furnished 2 BHK">
+
+                <button class="heart" onclick="toggleHeart(this)">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="property-content">
+
+                <h3>Furnished 2 BHK</h3>
+
+                <p class="location">📍 Dombivli</p>
+
+                <h4>₹26,000 <span>/ month</span></h4>
+
+                <div class="property-details">
+                    <span>🛏 2 Beds</span>
+                    <span>🛁 2 Baths</span>
+                    <span>📐 1050 sq.ft</span>
+                </div>
+
+                <button class="rent-button"
+                    onclick="openRentForm('Furnished 2 BHK')">
+                    Rent Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 13 -->
+
+        <div class="property-card extra-rental">
+
+            <div class="property-image">
+
+                <img src="Assest/images/rent13.jpg" alt="Compact Studio">
+
+                <button class="heart" onclick="toggleHeart(this)">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="property-content">
+
+                <h3>Compact Studio</h3>
+
+                <p class="location">📍 Thane West</p>
+
+                <h4>₹13,000 <span>/ month</span></h4>
+
+                <div class="property-details">
+                    <span>🛏 1 Bed</span>
+                    <span>🛁 1 Bath</span>
+                    <span>📐 520 sq.ft</span>
+                </div>
+
+                <button class="rent-button"
+                    onclick="openRentForm('Compact Studio')">
+                    Rent Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 14 -->
+
+        <div class="property-card extra-rental">
+
+            <div class="property-image">
+
+                <img src="Assest/images/rent14.jpg" alt="Premium Family Home">
+
+                <button class="heart" onclick="toggleHeart(this)">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="property-content">
+
+                <h3>Premium Family Home</h3>
+
+                <p class="location">📍 Kalyan West</p>
+
+                <h4>₹35,000 <span>/ month</span></h4>
+
+                <div class="property-details">
+                    <span>🛏 3 Beds</span>
+                    <span>🛁 3 Baths</span>
+                    <span>📐 1600 sq.ft</span>
+                </div>
+
+                <button class="rent-button"
+                    onclick="openRentForm('Premium Family Home')">
+                    Rent Now
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- VIEW ALL BUTTON -->
+
+    <div class="view-all-container">
+
+        <button
+            class="view-all-button"
+            id="viewAllButton"
+            onclick="showAllRentals()">
+
+            View All Rentals →
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHY RENT ================= -->
+
+<section class="why-rent">
+
+    <div class="section-heading">
+
+        <p class="small-title">WHY PROPERTY WORLD</p>
+
+        <h2>Why Rent With Us?</h2>
+
+    </div>
+
+
+    <div class="why-container">
+
+        <div class="why-card">
+            <div class="why-icon">🏠</div>
+            <h3>Verified Properties</h3>
+            <p>We help you find genuine rental properties.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">💰</div>
+            <h3>Best Prices</h3>
+            <p>Find homes at reasonable rental prices.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">🔑</div>
+            <h3>Easy Process</h3>
+            <p>Simple and convenient rental process.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">🤝</div>
+            <h3>Trusted Support</h3>
+            <p>Our team is ready to help you.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="rent-cta">
+
+    <div>
+
+        <h2>Ready To Find Your New Home?</h2>
+
+        <p>
+            Explore our rental properties and find
+            a home that feels right for you.
+        </p>
+
+        <button onclick="document.getElementById('featured-rentals').scrollIntoView({behavior:'smooth'})">
+            Browse Rentals
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-column">
+
+            <img
+                src="Assest/images/logo.png"
+                alt="Property World"
+                class="footer-logo"
+            >
+
+            <p>
+                Find your dream home with Property World.
+                Buy, rent and explore properties easily.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="Buy.html">Buy</a>
+            <a href="Rent.html">Rent</a>
+            <a href="Agent.html">Agent</a>
+            <a href="about.html">About</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Customer Service</h3>
+
+            <a href="#">Help Center</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>📞 +91 98765 43210</p>
+            <p>✉ propertyworld@gmail.com</p>
+            <p>📍 Maharashtra, India</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Property World. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================= RENT FORM MODAL ================= -->
+
+<div class="rent-modal" id="rentModal">
+
+    <div class="rent-modal-box">
+
+        <button
+            class="close-modal"
+            onclick="closeRentForm()">
+            ×
+        </button>
+
+
+        <p class="small-title">RENTAL REQUEST</p>
+
+        <h2>Rent This Property</h2>
+
+        <p class="selected-property" id="selectedProperty">
+            Property
+        </p>
+
+
+        <form id="rentForm" class="rent-form">
+
+            <label>Your Name</label>
+
+            <input
+                type="text"
+                id="renterName"
+                placeholder="Enter your name"
+                required
+            >
+
+
+            <label>Phone Number</label>
+
+            <input
+                type="tel"
+                id="renterPhone"
+                placeholder="Enter 10 digit mobile number"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                required
+            >
+
+
+            <label>Email</label>
+
+            <input
+                type="email"
+                id="renterEmail"
+                placeholder="Enter your email"
+                required
+            >
+
+
+            <label>Move-in Date</label>
+
+            <input
+                type="date"
+                id="moveInDate"
+                required
+            >
+
+
+            <label>Rental Duration</label>
+
+            <select id="duration" required>
+
+                <option value="">Select duration</option>
+                <option value="6 Months">6 Months</option>
+                <option value="1 Year">1 Year</option>
+                <option value="2 Years">2 Years</option>
+
+            </select>
+
+
+            <button type="submit" class="submit-rent">
+                Submit Rental Request
+            </button>
+
+        </form>
+
+
+        <p id="rentSuccess" class="rent-success"></p>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+    /* SHOW ALL 14 RENTAL CARDS */
+
+    function showAllRentals() {
+
+        const extraCards =
+            document.querySelectorAll(".extra-rental");
+
+        extraCards.forEach(function(card) {
+
+            card.style.display = "block";
+
+        });
+
+        document.getElementById("viewAllButton").style.display = "none";
+
+    }
+
+
+
+    /* HEART BUTTON */
+
+    function toggleHeart(button) {
+
+        if (button.innerHTML.trim() === "♡") {
+
+            button.innerHTML = "♥";
+            button.classList.add("liked");
+
+        } else {
+
+            button.innerHTML = "♡";
+            button.classList.remove("liked");
+
+        }
+
+    }
+
+
+
+    /* OPEN RENT FORM */
+
+    function openRentForm(propertyName) {
+
+        document.getElementById("selectedProperty").innerHTML =
+            "You are requesting to rent: <strong>"
+            + propertyName +
+            "</strong>";
+
+        document.getElementById("rentSuccess").innerHTML = "";
+
+        document.getElementById("rentForm").reset();
+
+        document.getElementById("rentModal").style.display = "flex";
+
+    }
+
+
+
+    /* CLOSE RENT FORM */
+
+    function closeRentForm() {
+
+        document.getElementById("rentModal").style.display = "none";
+
+    }
+
+
+
+    /* CLOSE WHEN CLICKING OUTSIDE FORM */
+
+    window.onclick = function(event) {
+
+        const modal =
+            document.getElementById("rentModal");
+
+        if (event.target === modal) {
+
+            closeRentForm();
+
+        }
+
+    }
+
+
+
+    /* SUBMIT RENT FORM */
+
+    document.getElementById("rentForm").addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+            document.getElementById("rentSuccess").innerHTML =
+                "✓ Rental request submitted successfully!";
+
+            this.reset();
+
+        }
+    );
+
+
+
+    /* SEARCH */
+
+    function searchRentals() {
+
+        const location =
+            document.getElementById("locationSearch").value
+            .toLowerCase()
+            .trim();
+
+        const cards =
+            document.querySelectorAll(".property-card");
+
+        if (location === "") {
+
+            alert("Please enter a location.");
+
+            return;
+
+        }
+
+
+        let found = false;
+
+
+        cards.forEach(function(card) {
+
+            const cardLocation =
+                card.querySelector(".location");
+
+            if (cardLocation) {
+
+                const text =
+                    cardLocation.innerText.toLowerCase();
+
+                if (text.includes(location)) {
+
+                    card.style.display = "block";
+                    found = true;
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            }
+
+        });
+
+
+        if (!found) {
+
+            alert("No rental property found in " + location);
+
+            cards.forEach(function(card) {
+
+                card.style.display = "block";
+
+            });
+
+        }
+
+    }
+
+</script>
+
+</body>
+</html>

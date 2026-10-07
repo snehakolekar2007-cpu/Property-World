@@ -1,0 +1,243 @@
+
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+
+    background-image: url("../Assest/images/banner 3.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+/* Navigation */
+
+
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 100px;
+    padding: 0 60px;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* Navigation */
+
+header nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+
+/* Logo */
+
+header nav > img {
+    width: 100px;
+    height: 100px;
+    margin-right: auto;
+}
+
+
+/* Navigation Links */
+
+header nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 90px;
+    padding: 0 4px;
+
+    text-decoration: none;
+    color: black;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    border-bottom: 3px solid transparent;
+}
+
+
+/* Hover */
+
+header nav a:hover {
+    color: #20573f;
+}
+
+
+/* Home Icon */
+
+header nav a:first-of-type img {
+    width: 28px;
+    height: 28px;
+}
+
+
+/* Login Icon */
+
+header nav a:last-child img {
+    width: 35px;
+    height: 35px;
+}
+/* Login Icon */
+
+.signup-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #20573f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.signup-btn:hover {
+    background-color: #153829;
+}
+
+
+
+
+/* Login Section */
+
+.auth-container {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Login Box */
+
+.auth-box {
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.20);
+    text-align: center;
+}
+
+
+/* Heading */
+
+.auth-box h2 {
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.auth-box h2 span {
+    color: #20573f;
+}
+
+
+/* Input */
+
+.auth-box input {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+
+/* Input when clicked */
+
+.auth-box input:focus {
+    outline: none;
+    border: 1px solid #20573f;
+}
+
+
+/* Login Button */
+
+.auth-box button {
+    width: 100%;
+
+    padding: 12px;
+
+    background-color: #20573f;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+/* Button Hover */
+
+.auth-box button:hover {
+    background-color: #153829;
+}
+
+
+/* Paragraph */
+
+.auth-box p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* Links */
+
+.auth-box p a {
+    color: #20573f;
+
+    text-decoration: none;
+
+    margin-left: 5px;
+}
+
+
+/* Link Hover */
+
+.auth-box p a:hover {
+    text-decoration: underline;
+}
+
+
+/* Error Message */
+
+small {
+    color: red;
+    display: block;
+    text-align: left;
+}
+

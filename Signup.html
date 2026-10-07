@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Property World</title>
+        <style>
+            li{
+                list-style-type: none;
+            }
+        </style>
+        <script src="https://kit.fontawesome.com/40e2082bfb.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css/login.css">
+        <link rel="icon" type="image/x-icon" href="image/favicon_io/favicon.ico">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+      </head>
+    <body> 
+<header>
+     <Nav> 
+        <!--logo section-->
+        <img src="Assest/images/logo.png" alt="Property World logo" width="180px">
+
+
+        <!-- Menu section-->
+
+        <a href="index.html" class="active">
+                <img src="Assest/icons/home.png">
+                </a>
+
+                <a href="Buy.html">Buy</a>
+
+                <a href="Rent.html">Rent</a>
+
+                <a href="Agent.html">Agent</a>
+
+                <a href="about.html">About</a>
+
+                <a href="Login.html">
+                <img src="./Assest/gif/login.gif">
+                </a>
+
+         
+
+     </Nav> 
+</header>
+ 
+
+
+<!--Start authentication section-->
+<section class="auth-container">
+
+    <div class="auth-box">
+        <h2>Create Account</h2>
+
+        <form id="sign-up">
+            <div>
+            <input type="text" placeholder="username"  name="username" id="username">
+            <small> </small>
+            </div>
+            <div>
+            <input type="email" placeholder="Email" name="email"  id="email">
+             <small> </small>
+             </div>
+             <div>
+            <input type="password" placeholder="Password" name="password" id="password"> 
+             <small> </small>
+             </div>
+             <div>
+            <input type="password" placeholder="Confirm password" name="confirm-password"  id="confirmpassword"> 
+            <small> </small>
+            </div>
+
+            <input type="submit" value="Sign Up" class="signup-btn">
+        </form>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+
+</section>
+<script src="JavaScript/FormValidation.js"></script>
+    </body>
+</html>

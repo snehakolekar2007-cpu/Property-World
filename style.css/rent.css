@@ -1,0 +1,859 @@
+/* ================= BASIC RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8faf8;
+    color: #222;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    width: 100%;
+    height: 100px;
+    padding: 0 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+header nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+header nav > img {
+    width: 100px;
+    height: 100px;
+    margin-right: auto;
+    object-fit: contain;
+}
+
+header nav a {
+    height: 90px;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: black;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    border-bottom: 3px solid transparent;
+}
+
+header nav a:hover {
+    color: #20573f;
+}
+
+header nav a.active {
+    color: #20573f;
+    border-bottom: 3px solid #20573f;
+}
+
+header nav a:first-of-type img {
+    width: 28px;
+    height: 28px;
+}
+
+header nav a:last-child img {
+    width: 35px;
+    height: 35px;
+}
+
+
+/* ================= HERO ================= */
+
+.rent-hero {
+    min-height: 500px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("../Assest/images/banner 4.png");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.hero-content {
+    color: white;
+    max-width: 850px;
+    padding: 30px;
+}
+
+.small-title {
+    color: #20573f;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.rent-hero .small-title {
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 18px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* ================= SEARCH ================= */
+
+.search-box {
+    margin: 30px auto 0;
+
+    width: 600px;
+    max-width: 100%;
+
+    background: white;
+
+    padding: 8px;
+
+    display: flex;
+
+    border-radius: 8px;
+}
+
+.search-box input {
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    padding: 15px;
+
+    font-size: 15px;
+}
+
+.search-box button {
+    background-color: #20573f;
+    color: white;
+
+    border: none;
+
+    padding: 0 28px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+.search-box button:hover {
+    background-color: #17432f;
+}
+
+
+/* ================= COMMON SECTION ================= */
+
+.lifestyle,
+.featured-rentals,
+.why-rent {
+    padding: 70px 7%;
+}
+
+.section-heading {
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    margin-top: 5px;
+}
+
+
+/* ================= LIFESTYLE ================= */
+
+.lifestyle-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 20px;
+}
+
+.lifestyle-card {
+    background-color: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.lifestyle-card img {
+    width: 100%;
+    height: 190px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.lifestyle-card h3 {
+    padding: 15px 15px 5px;
+}
+
+.lifestyle-card p {
+    padding: 0 15px 18px;
+
+    color: #666;
+
+    font-size: 14px;
+}
+
+
+/* ================= RENTAL CARDS ================= */
+
+.featured-container {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.property-card {
+    width: 100%;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+
+/* ================= PROPERTY IMAGE ================= */
+
+.property-image {
+    width: 100%;
+    height: 220px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: #eee;
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ================= HEART ================= */
+
+.heart {
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: white;
+
+    font-size: 23px;
+
+    color: #555;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.heart:hover {
+    color: #20573f;
+}
+
+.heart.liked {
+    color: #20573f;
+}
+
+
+/* ================= PROPERTY CONTENT ================= */
+
+.property-content {
+    padding: 20px;
+}
+
+.property-content h3 {
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+.location {
+    color: #666;
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+}
+
+.property-content h4 {
+    color: #20573f;
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+.property-content h4 span {
+    color: #777;
+
+    font-size: 13px;
+
+    font-weight: normal;
+}
+
+
+/* ================= PROPERTY DETAILS ================= */
+
+.property-details {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 18px;
+}
+
+.property-details span {
+    font-size: 12px;
+
+    color: #555;
+
+    background-color: #f2f5f2;
+
+    padding: 7px 9px;
+
+    border-radius: 5px;
+}
+
+
+/* ================= RENT BUTTON ================= */
+
+.rent-button {
+    width: 100%;
+
+    padding: 12px;
+
+    background-color: #20573f;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+.rent-button:hover {
+    background-color: #17432f;
+}
+
+
+/* ================= HIDDEN CARDS ================= */
+
+.extra-rental {
+    display: none;
+}
+
+
+/* ================= VIEW ALL ================= */
+
+.view-all-container {
+    text-align: center;
+
+    margin-top: 40px;
+}
+
+.view-all-button {
+    background-color: white;
+
+    color: #20573f;
+
+    border: 2px solid #20573f;
+
+    padding: 13px 30px;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+.view-all-button:hover {
+    background-color: #20573f;
+
+    color: white;
+}
+
+
+/* ================= WHY RENT ================= */
+
+.why-rent {
+    background-color: white;
+
+    text-align: center;
+}
+
+.why-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.why-card {
+    padding: 25px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    background-color: #fafafa;
+}
+
+.why-icon {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.why-card h3 {
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* ================= CTA ================= */
+
+.rent-cta {
+    min-height: 350px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("../Assest/images/banner 5.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+.rent-cta h2 {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.rent-cta p {
+    margin-bottom: 25px;
+
+    font-size: 17px;
+}
+
+.rent-cta button {
+    padding: 13px 28px;
+
+    background-color: white;
+
+    color: #20573f;
+
+    border: none;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background-color: #17251f;
+
+    color: white;
+
+    padding: 55px 7% 20px;
+}
+
+.footer-container {
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1fr;
+
+    gap: 40px;
+}
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.footer-logo {
+    width: 90px;
+    height: 90px;
+
+    object-fit: contain;
+}
+
+.footer-column p {
+    color: #ccc;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #ccc;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #425048;
+
+    margin-top: 40px;
+
+    padding-top: 20px;
+
+    text-align: center;
+}
+
+
+/* ================= RENT MODAL ================= */
+
+.rent-modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background-color:
+        rgba(0, 0, 0, 0.60);
+
+    z-index: 9999;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.rent-modal-box {
+    width: 450px;
+
+    max-width: 100%;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    padding: 30px;
+
+    position: relative;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.3);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+}
+
+.rent-modal-box h2 {
+    margin-bottom: 10px;
+}
+
+.selected-property {
+    color: #20573f;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ================= CLOSE BUTTON ================= */
+
+.close-modal {
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 30px;
+
+    color: #555;
+}
+
+.close-modal:hover {
+    color: #20573f;
+}
+
+
+/* ================= RENT FORM ================= */
+
+.rent-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.rent-form label {
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-top: 8px;
+}
+
+.rent-form input,
+.rent-form select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+.rent-form input:focus,
+.rent-form select:focus {
+    border-color: #20573f;
+}
+
+.submit-rent {
+    margin-top: 15px;
+
+    padding: 13px;
+
+    background-color: #20573f;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+.submit-rent:hover {
+    background-color: #17432f;
+}
+
+.rent-success {
+    color: #20573f;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    margin-top: 15px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    header {
+        padding: 0 25px;
+    }
+
+    .featured-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .lifestyle-container {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .why-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .footer-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    header {
+        height: auto;
+
+        padding: 10px 15px;
+    }
+
+    header nav {
+        gap: 12px;
+
+        flex-wrap: wrap;
+    }
+
+    header nav > img {
+        width: 70px;
+        height: 70px;
+    }
+
+    header nav a {
+        height: 60px;
+
+        font-size: 13px;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .lifestyle-container,
+    .featured-container,
+    .why-container,
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .lifestyle,
+    .featured-rentals,
+    .why-rent {
+        padding: 50px 20px;
+    }
+
+    .rent-modal-box {
+        padding: 25px 20px;
+    }
+
+}

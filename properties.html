@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Properties - Property World</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    <link
+        rel="stylesheet"
+        href="style.css/properties.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <nav>
+
+        <img
+            src="Assest/images/logo.png"
+            alt="Property World">
+
+
+        <a href="index.html">
+
+            <img
+                src="Assest/icons/home.png"
+                alt="Home">
+
+        </a>
+
+
+        <a href="Buy.html">
+            Buy
+        </a>
+
+
+        <a href="Rent.html">
+            Rent
+        </a>
+
+
+        <a href="Agent.html">
+            Agent
+        </a>
+
+
+        <a href="about.html">
+            About
+        </a>
+
+
+        <a href="Login.html">
+
+            <img
+                src="Assest/gif/login.gif"
+                alt="Login">
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="properties-hero">
+
+    <div class="properties-hero-content">
+
+        <p class="small-title">
+            PROPERTY WORLD
+        </p>
+
+
+        <h1 id="categoryTitle">
+            All Properties
+        </h1>
+
+
+        <p>
+            Find the perfect property for you.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROPERTIES ================= -->
+
+<section class="properties-section">
+
+
+    <div class="properties-heading">
+
+        <div>
+
+            <p class="section-small-title">
+                EXPLORE
+            </p>
+
+
+            <h2 id="sectionTitle">
+                All Properties
+            </h2>
+
+        </div>
+
+
+        <a
+            href="Buy.html"
+            class="back-button">
+
+            ← Back to Buy
+
+        </a>
+
+    </div>
+
+
+    <div class="properties-grid">
+
+
+        <!-- ================= APARTMENT 1 ================= -->
+
+        <div
+            class="property-card"
+            data-category="apartments">
+
+
+            <div class="property-image">
+
+                <img
+                    src="Assest/images/buy1.jpg"
+                    alt="Modern 2 BHK Apartment">
+
+
+                <button
+                    class="favorite"
+                    onclick="likeProperty(this)">
+
+                    ♡
+
+                </button>
+
+            </div>
+
+
+            <div class="property-content">
+
+                <p class="property-type">
+                    APARTMENT
+                </p>
+
+
+                <h3>
+                    Modern 2 BHK Apartment
+                </h3>
+
+
+                <p class="property-location">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Kalyan, Thane
+
+                </p>
+
+
+                <div class="property-info">
+
+                    <span>
+                        2 Beds
+                    </span>
+
+                    <span>
+                        2 Baths
+                    </span>
+
+                    <span>
+                        950 sq.ft.
+                    </span>
+
+                </div>
+
+
+                <div class="property-bottom">
+
+                    <strong>
+                        ₹68 Lakh
+                    </strong>
+
+
+                    <button
+                        onclick="viewProperty('Modern 2 BHK Apartment')">
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= APARTMENT 2 ================= -->
+
+        <div
+            class="property-card"
+            data-category="apartments">
+
+
+            <div class="property-image">
+
+                <img
+                    src="Assest/images/buy2.jpg"
+                    alt="Luxury 3 BHK Residence">
+
+
+                <button
+                    class="favorite"
+                    onclick="likeProperty(this)">
+
+                    ♡
+
+                </button>
+
+            </div>
+
+
+            <div class="property-content">
+
+                <p class="property-type">
+                    APARTMENT
+                </p>
+
+
+                <h3>
+                    Luxury 3 BHK Residence
+                </h3>
+
+
+                <p class="property-location">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Thane West, Thane
+
+                </p>
+
+
+                <div class="property-info">
+
+                    <span>
+                        3 Beds
+                    </span>
+
+                    <span>
+                        3 Baths
+                    </span>
+
+                    <span>
+                        1450 sq.ft.
+                    </span>
+
+                </div>
+
+
+                <div class="property-bottom">
+
+                    <strong>
+                        ₹1.25 Cr
+                    </strong>
+
+
+                    <button
+                        onclick="viewProperty('Luxury 3 BHK Residence')">
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= VILLA 1 ================= -->
+
+        <div
+            class="property-card"
+            data-category="villas">
+
+
+            <div class="property-image">
+
+                <img
+                    src="Assest/images/villa1.jpg"
+                    alt="Luxury Garden Villa">
+
+
+                <button
+                    class="favorite"
+                    onclick="likeProperty(this)">
+
+                    ♡
+
+                </button>
+
+            </div>
+
+
+            <div class="property-content">
+
+                <p class="property-type">
+                    VILLA
+                </p>
+
+
+                <h3>
+                    Luxury Garden Villa
+                </h3>
+
+
+                <p class="property-location">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Thane, Maharashtra
+
+                </p>
+
+
+                <div class="property-info">
+
+                    <span>
+                        3 Beds
+                    </span>
+
+                    <span>
+                        3 Baths
+                    </span>
+
+                    <span>
+                        1800 sq.ft.
+                    </span>
+
+                </div>
+
+
+                <div class="property-bottom">
+
+                    <strong>
+                        ₹1.80 Cr
+                    </strong>
+
+
+                    <button
+                        onclick="viewProperty('Luxury Garden Villa')">
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= VILLA 2 ================= -->
+
+        <div
+            class="property-card"
+            data-category="villas">
+
+
+            <div class="property-image">
+
+                <img
+                    src="Assest/images/villa2.jpg"
+                    alt="Modern Family Villa">
+
+
+                <button
+                    class="favorite"
+                    onclick="likeProperty(this)">
+
+                    ♡
+
+                </button>
+
+            </div>
+
+
+            <div class="property-content">
+
+                <p class="property-type">
+                    VILLA
+                </p>
+
+
+                <h3>
+                    Modern Family Villa
+                </h3>
+
+
+                <p class="property-location">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Dombivli, Thane
+
+                </p>
+
+
+                <div class="property-info">
+
+                    <span>
+                        4 Beds
+                    </span>
+
+                    <span>
+                        3 Baths
+                    </span>
+
+                    <span>
+                        2100 sq.ft.
+                    </span>
+
+                </div>
+
+
+                <div class="property-bottom">
+
+                    <strong>
+                        ₹2.10 Cr
+                    </strong>
+
+
+                    <button
+                        onclick="viewProperty('Modern Family Villa')">
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= FAMILY HOME ================= -->
+
+        <div
+            class="property-card"
+            data-category="family">
+
+
+            <div class="property-image">
+
+                <img
+                    src="Assest/images/family.jpg"
+                    alt="Beautiful Family Home">
+
+
+                <button
+                    class="favorite"
+                    onclick="likeProperty(this)">
+
+                    ♡
+
+                </button>
+
+            </div>
+
+
+            <div class="property-content">
+
+                <p class="property-type">
+                    FAMILY HOME
+                </p>
+
+
+                <h3>
+                    Beautiful Family Home
+                </h3>
+
+
+                <p class="property-location">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Dombivli, Thane
+
+                </p>
+
+
+                <div class="property-info">
+
+                    <span>
+                        3 Beds
+                    </span>
+
+                    <span>
+                        2 Baths
+                    </span>
+
+                    <span>
+                        1200 sq.ft.
+                    </span>
+
+                </div>
+
+
+                <div class="property-bottom">
+
+                    <strong>
+                        ₹92 Lakh
+                    </strong>
+
+
+                    <button
+                        onclick="viewProperty('Beautiful Family Home')">
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= PLOT ================= -->
+
+        <div
+            class="property-card"
+            data-category="plots">
+
+
+            <div class="property-image">
+
+                <img
+                    src="Assest/images/plot1.jpg"
+                    alt="Premium Residential Plot">
+
+
+                <button
+                    class="favorite"
+                    onclick="likeProperty(this)">
+
+                    ♡
+
+                </button>
+
+            </div>
+
+
+            <div class="property-content">
+
+                <p class="property-type">
+                    RESIDENTIAL PLOT
+                </p>
+
+
+                <h3>
+                    Premium Residential Plot
+                </h3>
+
+
+                <p class="property-location">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Kalyan, Thane
+
+                </p>
+
+
+                <div class="property-info">
+
+                    <span>
+                        2000 sq.ft.
+                    </span>
+
+                    <span>
+                        Residential
+                    </span>
+
+                    <span>
+                        Ready
+                    </span>
+
+                </div>
+
+
+                <div class="property-bottom">
+
+                    <strong>
+                        ₹75 Lakh
+                    </strong>
+
+
+                    <button
+                        onclick="viewProperty('Premium Residential Plot')">
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 Property World. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script>
+
+    /* =====================================================
+       CATEGORY FILTER
+    ===================================================== */
+
+    const urlParams =
+        new URLSearchParams(window.location.search);
+
+
+    const category =
+        urlParams.get("category");
+
+
+    const categoryNames = {
+
+        apartments: "Apartments",
+
+        villas: "Villas",
+
+        family: "Family Homes",
+
+        plots: "Plots"
+
+    };
+
+
+    const cards =
+        document.querySelectorAll(".property-card");
+
+
+    if (category && categoryNames[category]) {
+
+
+        document.getElementById("categoryTitle")
+            .textContent =
+            categoryNames[category];
+
+
+        document.getElementById("sectionTitle")
+            .textContent =
+            categoryNames[category] +
+            " Properties";
+
+
+        cards.forEach(function(card) {
+
+            if (
+                card.dataset.category === category
+            ) {
+
+                card.style.display = "block";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+    }
+
+
+    /* =====================================================
+       VIEW PROPERTY
+    ===================================================== */
+
+    function viewProperty(propertyName) {
+
+        window.location.href =
+            "property-details.html?property=" +
+            encodeURIComponent(propertyName);
+
+    }
+
+
+    /* =====================================================
+       LIKE
+    ===================================================== */
+
+    function likeProperty(button) {
+
+        if (
+            button.innerHTML.trim() === "♡"
+        ) {
+
+            button.innerHTML = "♥";
+
+            button.style.color = "#20573f";
+
+        } else {
+
+            button.innerHTML = "♡";
+
+            button.style.color = "#222";
+
+        }
+
+    }
+
+</script>
+
+
+</body>
+</html>

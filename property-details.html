@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Property Details - Property World</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link
+        rel="stylesheet"
+        href="style.css/property-details.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <nav>
+
+        <img
+            src="Assest/images/logo.png"
+            alt="Property World">
+
+
+        <a href="index.html">
+
+            <img
+                src="Assest/icons/home.png"
+                alt="Home">
+
+        </a>
+
+
+        <a href="Buy.html">
+            Buy
+        </a>
+
+
+        <a href="Rent.html">
+            Rent
+        </a>
+
+
+        <a href="Agent.html">
+            Agent
+        </a>
+
+
+        <a href="about.html">
+            About
+        </a>
+
+
+        <a href="Login.html">
+
+            <img
+                src="Assest/gif/login.gif"
+                alt="Login">
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= PROPERTY DETAILS ================= -->
+
+<section class="details-section">
+
+    <a
+        href="Buy.html"
+        class="back-link">
+
+        ← Back to Buy
+
+    </a>
+
+
+    <div
+        class="property-details"
+        id="propertyDetails">
+
+    </div>
+
+</section>
+
+
+<!-- ================= APPOINTMENT FORM ================= -->
+
+<div
+    class="appointment-overlay"
+    id="appointmentOverlay">
+
+
+    <div class="appointment-form">
+
+
+        <button
+            class="close-form"
+            onclick="closeAppointmentForm()">
+
+            ×
+
+        </button>
+
+
+        <h2>
+            Book a Property Visit
+        </h2>
+
+
+        <p>
+            Fill in your details and our agent
+            will contact you.
+        </p>
+
+
+        <form
+            onsubmit="submitAppointment(event)">
+
+
+            <label>
+                Your Name
+            </label>
+
+            <input
+                type="text"
+                id="visitorName"
+                placeholder="Enter your name"
+                required>
+
+
+            <label>
+                Mobile Number
+            </label>
+
+            <input
+                type="tel"
+                id="visitorPhone"
+                placeholder="Enter 10-digit mobile number"
+                maxlength="10"
+                required>
+
+
+            <label>
+                Visit Date
+            </label>
+
+            <input
+                type="date"
+                id="visitDate"
+                required>
+
+
+            <label>
+                Visit Time
+            </label>
+
+            <input
+                type="time"
+                id="visitTime"
+                required>
+
+
+            <button
+                type="submit"
+                class="submit-appointment">
+
+                Submit Request
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+
+/* =====================================================
+   PROPERTY DATA
+===================================================== */
+
+const properties = {
+
+    "Modern 2 BHK Apartment": {
+
+        image: "Assest/images/buy1.jpg",
+        type: "Apartment",
+        location: "Kalyan, Thane",
+        price: "₹68 Lakh",
+        size: "950 sq.ft.",
+        bedrooms: "2 Bedrooms",
+        bathrooms: "2 Bathrooms"
+
+    },
+
+
+    "Luxury 3 BHK Residence": {
+
+        image: "Assest/images/buy2.jpg",
+        type: "Residence",
+        location: "Thane West, Thane",
+        price: "₹1.25 Cr",
+        size: "1450 sq.ft.",
+        bedrooms: "3 Bedrooms",
+        bathrooms: "3 Bathrooms"
+
+    },
+
+
+    "Beautiful Family Home": {
+
+        image: "Assest/images/buy3.jpg",
+        type: "Family Home",
+        location: "Dombivli, Thane",
+        price: "₹92 Lakh",
+        size: "1200 sq.ft.",
+        bedrooms: "3 Bedrooms",
+        bathrooms: "2 Bathrooms"
+
+    },
+
+
+    "Luxury Garden Villa": {
+
+        image: "Assest/images/villa1.jpg",
+        type: "Villa",
+        location: "Thane, Maharashtra",
+        price: "₹1.80 Cr",
+        size: "1800 sq.ft.",
+        bedrooms: "3 Bedrooms",
+        bathrooms: "3 Bathrooms"
+
+    },
+
+
+    "Modern Family Villa": {
+
+        image: "Assest/images/villa2.jpg",
+        type: "Villa",
+        location: "Dombivli, Thane",
+        price: "₹2.10 Cr",
+        size: "2100 sq.ft.",
+        bedrooms: "4 Bedrooms",
+        bathrooms: "3 Bathrooms"
+
+    },
+
+
+    "Premium Residential Plot": {
+
+        image: "Assest/images/plot1.jpg",
+        type: "Residential Plot",
+        location: "Kalyan, Thane",
+        price: "₹75 Lakh",
+        size: "2000 sq.ft.",
+        bedrooms: "Residential",
+        bathrooms: "Ready to Build"
+
+    }
+
+};
+
+
+/* =====================================================
+   GET PROPERTY NAME FROM URL
+===================================================== */
+
+const urlParams =
+    new URLSearchParams(window.location.search);
+
+const propertyName =
+    urlParams.get("property");
+
+
+/* =====================================================
+   FIND PROPERTY
+===================================================== */
+
+const property =
+    properties[propertyName];
+
+
+const details =
+    document.getElementById("propertyDetails");
+
+
+/* =====================================================
+   DISPLAY PROPERTY
+===================================================== */
+
+if (property) {
+
+    details.innerHTML = `
+
+        <div class="details-image">
+
+            <img
+                src="${property.image}"
+                alt="${propertyName}">
+
+        </div>
+
+
+        <div class="details-content">
+
+            <p class="details-type">
+                ${property.type}
+            </p>
+
+
+            <h1>
+                ${propertyName}
+            </h1>
+
+
+            <p class="details-location">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                ${property.location}
+
+            </p>
+
+
+            <h2 class="details-price">
+                ${property.price}
+            </h2>
+
+
+            <div class="details-info">
+
+                <div>
+
+                    <i class="fa-solid fa-ruler-combined"></i>
+
+                    <span>
+                        ${property.size}
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <i class="fa-solid fa-bed"></i>
+
+                    <span>
+                        ${property.bedrooms}
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <i class="fa-solid fa-bath"></i>
+
+                    <span>
+                        ${property.bathrooms}
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <p class="details-description">
+
+                This beautiful property is located
+                in a convenient location and offers
+                comfortable living space with modern
+                facilities. Contact our agent to know
+                more details and schedule a visit.
+
+            </p>
+
+
+            <div class="details-buttons">
+
+                <button
+                    onclick="openAppointmentForm()">
+
+                    <i class="fa-regular fa-calendar-check"></i>
+
+                    Book a Visit
+
+                </button>
+
+
+                <button
+                    onclick="contactAgent()">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    Contact Agent
+
+                </button>
+
+            </div>
+
+        </div>
+
+    `;
+
+}
+
+
+/* =====================================================
+   PROPERTY NOT FOUND
+===================================================== */
+
+else {
+
+    details.innerHTML = `
+
+        <div class="error-message">
+
+            <h2>
+                Property Not Found
+            </h2>
+
+            <p>
+                The selected property could not be found.
+            </p>
+
+            <a href="Buy.html">
+                ← Go Back to Buy
+            </a>
+
+        </div>
+
+    `;
+
+}
+
+
+/* =====================================================
+   BOOK VISIT FORM
+===================================================== */
+
+function openAppointmentForm() {
+
+    document.getElementById(
+        "appointmentOverlay"
+    ).style.display = "flex";
+
+}
+
+
+/* =====================================================
+   CLOSE FORM
+===================================================== */
+
+function closeAppointmentForm() {
+
+    document.getElementById(
+        "appointmentOverlay"
+    ).style.display = "none";
+
+}
+
+
+/* =====================================================
+   SUBMIT FORM
+===================================================== */
+
+function submitAppointment(event) {
+
+    event.preventDefault();
+
+
+    const name =
+        document.getElementById("visitorName")
+        .value
+        .trim();
+
+
+    const phone =
+        document.getElementById("visitorPhone")
+        .value
+        .trim();
+
+
+    const date =
+        document.getElementById("visitDate")
+        .value;
+
+
+    const time =
+        document.getElementById("visitTime")
+        .value;
+
+
+    /* Check mobile number */
+
+    if (!/^[0-9]{10}$/.test(phone)) {
+
+        alert(
+            "Please enter a valid 10-digit mobile number."
+        );
+
+        return;
+
+    }
+
+
+    /* Success message */
+
+    alert(
+
+        "VISIT REQUEST SUBMITTED!\n\n" +
+
+        "Property: " + propertyName +
+
+        "\nName: " + name +
+
+        "\nMobile: " + phone +
+
+        "\nDate: " + date +
+
+        "\nTime: " + time +
+
+        "\n\nOur team will contact you soon."
+
+    );
+
+
+    closeAppointmentForm();
+
+
+    document.querySelector(
+        ".appointment-form form"
+    ).reset();
+
+}
+
+
+/* =====================================================
+   CONTACT AGENT
+===================================================== */
+
+function contactAgent() {
+
+    window.location.href = "Agent.html";
+
+}
+
+</script>
+
+
+</body>
+
+</html>
